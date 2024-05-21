@@ -158,35 +158,7 @@
   </div>
 </section>
 
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
-    
-    // Your email address where you want to receive emails
-    $to = "mumit0962@gmail.com"; 
-    
-    // Set the email headers
-    $headers = "From: $name <$email>\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-    // Compose the email message
-    $body = "Name: $name\n";
-    $body .= "Email: $email\n";
-    $body .= "Subject: $subject\n\n";
-    $body .= "Message:\n$message";
-
-    // Send the email
-    if (mail($to, $subject, $body, $headers)) {
-        echo "Email sent successfully!";
-    } else {
-        echo "Failed to send email. Please try again later.";
-    }
-}
-?>
 
 
 
@@ -225,7 +197,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </a>
 
         <p class="footer-text">
-          &copy; 2023 Mumit Hassan. </p>
+          &copy; Texcorp Trading Limited. </p>
+
+        <p class ="footer-text">
+          Designed by <a href="https://www.linkedin.com/in/mumithasssan/">Mumit Hassan</a>
+        </p>  
 
         <ul class="social-list">
 
@@ -279,7 +255,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </li>
 
         <li>
-          <a href="#" class="footer-link">About Us</a>
+          <a href="About.html" class="footer-link">About Us</a>
         </li>
 
         <li>
@@ -294,9 +270,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <a href="https://www.uster.com/" target="_blank" class="footer-link">USTER</a>
         </li>
 
-        <li>
-          <a href="#" class="footer-link">Service</a>
-        </li>
+      
 
       </ul>
 
